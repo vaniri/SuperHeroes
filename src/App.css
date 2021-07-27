@@ -13,19 +13,71 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.hero-page {
+  text-align: center;
+  margin: 15px auto;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  color: royalblue;
+  font-family: 'Otomanopee One', sans-serif;
+  font-size: 40px;
+}
+
+.search-hero {
+  margin: 35px auto;
+
+}
+
+.search-hero-label {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.hero-card {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content: space-evenly;
+}
+
+.hero-info-card {
+  display: grid;
+  grid-template-columns: 49% 49% 2%;
+  max-width: 60%;
+  padding: 15px;
+  border: 1px solid black;
+  margin: 15px auto;
+  box-shadow: 2px 2px 3px 0px #1111, 0px 3px 10px 0px #E0E0E0;
+}
+
+.hero {
+  padding: 15px;
+  border: 1px solid black;
+  margin: 15px;
+  box-shadow: 2px 2px 3px 0px #1111, 0px 3px 10px 0px #E0E0E0;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.hero-name {
+  font-family: 'Otomanopee One', sans-serif;
+  font-size: 25px;
+  text-align: center;
+}
+
+.close-btn {
+  font-weight: 600;
+  border-radius: 50% 50%;
+  font-size: 20px;
+  border: none;
+  box-shadow: 2px 2px 3px 0px #1111, 0px 3px 10px 0px #E0E0E0;
+}
+
+.close-btn:hover {
+  background-color: darkgray;
 }
 
 @keyframes App-logo-spin {
