@@ -2,6 +2,6 @@
 
 In the project directory just run:
 
-### `npm install` and then ### `npm start`
+### `npm install` and then `npm start`
 
-##Enjoy!
+Enjoy!
