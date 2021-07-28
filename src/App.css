@@ -1,3 +1,8 @@
+body {
+  background-image: url('../src/Img/4872528.jpg');
+  background-position: 0 0px;
+}
+
 .App {
   text-align: center;
 }
@@ -19,14 +24,16 @@
 }
 
 .title {
-  color: royalblue;
+  color: black;
   font-family: 'Otomanopee One', sans-serif;
-  font-size: 40px;
+  font-size: 45px;
 }
 
 .search-hero {
-  margin: 35px auto;
-
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 
 .search-hero-label {
@@ -34,50 +41,90 @@
   font-size: 20px;
 }
 
-.hero-card {
+.hero-grid {
   display: flex;
   flex-wrap: wrap;
-  padding: 5px;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.hero-cart {
+  background: white;
+  padding: 15px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 3px 0px #1111, 0px 3px 10px 0px #E0E0E0;
+  margin: 20px auto 20px auto;
+}
+
+.hero-cart:hover {
+  cursor: pointer;
+  transform: translate3d(0, -1em, 0);
+  transition: transform 0.5s ease;
 }
 
 .hero-info-card {
-  display: grid;
-  grid-template-columns: 49% 49% 2%;
-  max-width: 60%;
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 45%;
+  min-height: 100%;
   padding: 15px;
   border: 1px solid black;
-  margin: 15px auto;
+  margin: 25px auto;
   box-shadow: 2px 2px 3px 0px #1111, 0px 3px 10px 0px #E0E0E0;
 }
 
-.hero {
-  padding: 15px;
-  border: 1px solid black;
-  margin: 15px;
-  box-shadow: 2px 2px 3px 0px #1111, 0px 3px 10px 0px #E0E0E0;
+.hero-info-img-container {
+  width: 50%
 }
 
 .hero-img {
   width: 100%;
 }
 
+.hero-info {
+  text-align: left;
+}
+
+.hero-info h1 {
+  border-bottom: 2px black solid;
+  color: blue;
+  text-align: center;
+}
+
 .hero-name {
   font-family: 'Otomanopee One', sans-serif;
   font-size: 25px;
+  text-align: left;
+}
+
+.hero-cart h2 {
   text-align: center;
 }
 
 .close-btn {
-  font-weight: 600;
-  border-radius: 50% 50%;
-  font-size: 20px;
+  background-color: blue;
+  display: block;
+  margin: auto;
+  padding: 15px 25px;
   border: none;
-  box-shadow: 2px 2px 3px 0px #1111, 0px 3px 10px 0px #E0E0E0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  color: white;
+  border-radius: 9% 9%;
+  margin-top: 25px;
 }
 
 .close-btn:hover {
-  background-color: darkgray;
+  cursor: pointer;
+  background-color: blue;
+  box-shadow: inset -4em 0 0 0 #f23838, inset 4em 0 0 0 #f23838;
+  transition: ease-out 0.7s;
+  color: black;
+  cursor: pointer;
 }
 
 @keyframes App-logo-spin {

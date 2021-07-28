@@ -5,8 +5,7 @@ import './App.css';
 const App = () => {
   return (
     <div className="hero-page">
-      <h1 className="title">CHOOSE YOUR HERO!</h1>
-      <HeroContainer/>
+      <HeroContainer />
     </div>
   );
 }

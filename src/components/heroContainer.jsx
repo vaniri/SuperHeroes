@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SearchHero from '../components/SearchHero';
+import { FaTimesCircle } from 'react-icons/fa';
 
 const HeroContainer = () => {
     const [heroes, setHeroes] = useState([]);
@@ -22,30 +23,30 @@ const HeroContainer = () => {
 
     return (
         <div>
-            {!hero.name ? 
+            {!hero.name ?
                 <div>
                     <div className="search-hero">
+                        <h1 className="title">CHOOSE YOUR HERO!</h1>
                         <SearchHero setSearchStr={setSearchStr} />
                     </div>
-                    <div className="hero-card">
+                    <div className="hero-grid">
                         {heroes.filter(hero => hero.name.toLowerCase().includes(searchStr.toLowerCase())).map(hero => (
-                            <div className="hero"
+                            <div className="hero-cart"
                                 onClick={() => setHero(hero)}
                                 key={hero.id}>
                                 <img className="hero-img" alt="hero avatar" loading="lazy" src={hero.images.md} />
                                 <h2 className="hero-name">{hero.name}</h2>
                             </div>
                         ))}
-                    </div> 
-                </div>:
+                    </div>
+                </div> :
                 <div>
                     <div className="hero-info-card">
-                        <div>
+                        <div className="hero-info-img-container">
                             <img className="hero-img" alt="hero avatar" loading="lazy" src={hero.images.md} />
                         </div>
-                        <div>
-                            <h2 className="hero-name">Name: {hero.name}</h2>
-                            <h5 className="hero-name">Slug: {hero.slug}</h5>
+                        <div className="hero-info">
+                            <h1 className="hero-name">Name: {hero.name}</h1>
                             <h5 className="hero-name">intelligence: {hero.powerstats.intelligence}</h5>
                             <h5 className="hero-name">Strength: {hero.powerstats.strength}</h5>
                             <h5 className="hero-name">Speed: {hero.powerstats.speed}</h5>
@@ -55,11 +56,12 @@ const HeroContainer = () => {
                             <h5 className="hero-name">Gender: {hero.appearance.gender}</h5>
                             <h5 className="hero-name">Race: {hero.appearance.race}</h5>
                         </div>
-                        <div> <button
+                    </div>
+                    <div>
+                        <button
                             className="close-btn"
-                            onClick={() => setHero({})}>x
+                            onClick={() => setHero({})}>CLOSE
                         </button>
-                        </div>
                     </div>
                 </div>
             }
