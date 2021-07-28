@@ -1,7 +1,10 @@
-# Getting Started with Create React App
+# Getting Started with the App:
 
 In the project directory just run:
 
-### `npm install` and then `npm start`
+```sh
+npm install
+npm start
+```
 
-Enjoy!
+**Enjoy!**
