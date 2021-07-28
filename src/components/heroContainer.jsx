@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import SearchHero from '../components/SearchHero';
-import { FaTimesCircle } from 'react-icons/fa';
 
 const HeroContainer = () => {
     const [heroes, setHeroes] = useState([]);
@@ -15,7 +14,7 @@ const HeroContainer = () => {
             setHeroes(heroesData);
             console.log(heroes);
         } else {
-            console.err("Error finding heroes")
+            console.err("Error finding heroes");
         }
     }
 
@@ -27,7 +26,7 @@ const HeroContainer = () => {
                 <div>
                     <div className="search-hero">
                         <h1 className="title">CHOOSE YOUR HERO!</h1>
-                        <SearchHero setSearchStr={setSearchStr} />
+                        <SearchHero setSearchStr={setSearchStr}/>
                     </div>
                     <div className="hero-grid">
                         {heroes.filter(hero => hero.name.toLowerCase().includes(searchStr.toLowerCase())).map(hero => (
